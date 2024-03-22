@@ -13,4 +13,5 @@ export async function POST(req: Request) {
     const {name} = body
     const image_description = await generateImagePrompt(name);
     console.log({image_description});
+    return new NextResponse("ok");
 }
