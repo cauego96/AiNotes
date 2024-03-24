@@ -7,6 +7,7 @@ import { $notes } from '@/lib/db/schema';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { clerk } from '@/lib/db/clerk-server';
+import TipTapEditor from '@/components/TipTapEditor';
 
 type Props = {
     params:{
@@ -26,7 +27,7 @@ const NotebooPage = async ({params: {noteId}}: Props) => {
         .where(and(eq($notes.id, parseInt(noteId)), eq($notes.userId, userId)));
 
     if (notes.length != 1) {
-        //return redirect('/dashboard'); remover // depois
+        return redirect('/dashboard');
     }
 
     const note = notes[0];
@@ -45,12 +46,12 @@ const NotebooPage = async ({params: {noteId}}: Props) => {
                         {user.firstName} {user.lastName}
                     </span>
                     <span className="inline-block mx-1">/</span>
-                    <span className="text-stone-500 font-semibold">{/*{note.name}*/}Nome da nota</span> {/*Corrigir depois*/}
+                    <span className="text-stone-500 font-semibold">{note.name}</span> {/*Corrigir depois*/}
                     <div className="ml-auto">DELETE BUTTON</div>
                 </div>
                 <div className="h-4"></div>
                 <div className="border-stone-200 shadow-xl border rounded-lg px-16 py-8 w-full">
-                    {/*Editor*/}
+                    <TipTapEditor/>
                 </div>
             </div>
         </div>
