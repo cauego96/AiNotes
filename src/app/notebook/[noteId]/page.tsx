@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation';
 import { $notes } from '@/lib/db/schema';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { clerk } from '@/lib/db/clerk-server';
+import { clerk } from '@/lib/clerk-server';
 import TipTapEditor from '@/components/TipTapEditor';
 
 type Props = {
@@ -51,7 +51,7 @@ const NotebooPage = async ({params: {noteId}}: Props) => {
                 </div>
                 <div className="h-4"></div>
                 <div className="border-stone-200 shadow-xl border rounded-lg px-16 py-8 w-full">
-                    <TipTapEditor/>
+                    <TipTapEditor note={note}/>
                 </div>
             </div>
         </div>
