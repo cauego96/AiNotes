@@ -86,8 +86,17 @@ const TipTapEditor = ({note}: Props) => {
             {saveNote.isPending ? "Saving..." : "Saved"}
         </Button>
     </div>
-    <div className="prose">
+    <div className="prose prose-sm w-full mt-4">
         <EditorContent editor={editor}/>
+    </div>
+    <div className="text-sm">
+        Tip: Press{" "}
+        <kbd
+        className="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg">
+            Shift + A
+        </kbd>
+        {" "}
+        for AI autocomplete
     </div>
     </>
   );
