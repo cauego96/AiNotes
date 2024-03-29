@@ -1,5 +1,17 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Technologies Used
+
+- NextJs 14;
+- Shadcn (Tailwind);
+- OpenAI (Dalle)
+- Vercel Edge runtime;
+- DrizzleORM;
+- NeonDB;
+- Firebase Storage;
+- TipTap WYSIWYG Editor;
+- Vercel AI SDK.
+
 ## Getting Started
 
 First, run the development server:
