@@ -8,6 +8,7 @@ import CreateNoteDialog from '@/components/CreateNoteDialog';
 import { db } from '@/lib/db';
 import { eq } from "drizzle-orm";
 import { $notes } from '@/lib/db/schema';
+import Image from 'next/image';
 
 type Props = {}
 
@@ -54,9 +55,9 @@ const notes = await db
                     <CreateNoteDialog />
                     {notes.map(note => {
                         return(
-                            <a href={'/notes/${note.id'} key={note.id}>
+                            <a href={`/notebook/${note.id}`} key={note.id}>
                                 <div className="border border-stone-200 rounded-lg overflow-hidden flex flex-col hover:shadow-xl transition hover:-translate-y-1">
-                                    <img 
+                                    <Image 
                                         width={400} 
                                         height={200} 
                                         alt={note.name} 
