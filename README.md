@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Description
+
+Note manager integrated with OpenAI, using a shortcut to complete texts and generating a cover image with DALL·E that represents the title of the note.
+
+In this project I was able to learn about and delve deeper into very useful technologies. I need to comment on the ease of applying components with Shadcn, the use of Tailwind CSS as a quick and efficient customization, the easy and readable interaction with the database that Drizzle ORM makes possible, the quick deployment of vercel and how the integration with OpenAI it works.
+
 ## Technologies Used
 
 - NextJs 14;
