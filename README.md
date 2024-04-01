@@ -12,6 +12,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - TipTap WYSIWYG Editor;
 - Vercel AI SDK.
 
+## project
+
+<img src="ainotes.gif">
+
 ## Getting Started
 
 First, run the development server:
